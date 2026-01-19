@@ -41,7 +41,7 @@ To run the project locally:
 
 1. Clone the repository or download the project files  
 2. Make sure all files (HTML, CSS, JS) are correctly placed  
-3. Open `index.html` (or `index.jsx` if using React) in your browser  
+3. Open `index.html` in your browser  
 4. Explore meals and log your daily intake!
 
 ---

@@ -1,6 +1,7 @@
 # 🥗 NutriPlan2
 
 NutriPlan1 is a dynamic meal tracking web application that helps users explore meals, view full recipe details, and log their daily food intake with nutrition tracking.  
+
 It allows browsing 25+ meals, filtering by category or area, viewing ingredients, steps, videos, nutrition info, and logging meals in a persistent food log using LocalStorage — all in a clean, responsive interface.
 
 ---

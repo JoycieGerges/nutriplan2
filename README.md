@@ -29,7 +29,6 @@ Check out the live website here:
 HTML5 – Structure & layout  
 CSS3 / Tailwind – Styling and responsiveness  
 JavaScript (ES6) – App logic and DOM manipulation  
-React – UI components  
 LocalStorage – Data persistence  
 Fetch API – Retrieve meal data dynamically
 

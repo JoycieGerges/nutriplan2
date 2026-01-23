@@ -1,0 +1,11 @@
+.loading {
+  display:none
+}
+
+ .active-link {
+    background-color: #ECFDF5;
+    color: #007A55;
+  }
+  #meal-details {
+  display: none; 
+}

@@ -1,55 +1,120 @@
-# 🥗 NutriPlan2
+# NutriPlan - JavaScript Starter Project
 
-NutriPlan1 is a dynamic meal tracking web application that helps users explore meals, view full recipe details, and log their daily food intake with nutrition tracking.  
+Welcome to the NutriPlan starter project! The design is fully complete - your task is to bring it to life with JavaScript.
 
-It allows browsing 25+ meals, filtering by category or area, viewing ingredients, steps, videos, nutrition info, and logging meals in a persistent food log using LocalStorage — all in a clean, responsive interface.
+## 🎯 Project Overview
 
----
+NutriPlan is a Food, Nutrition & Fitness Planner web application. The HTML and CSS are ready - you need to implement the JavaScript functionality.
 
-# 🌐 Live Demo
+## 📁 Project Structure
 
-Check out the live website here:  
-[https://nutriplan1.netlify.app](https://nutriplan2.netlify.app)
+```
+starter/
+├── index.html          # Main HTML file (ready)
+├── README.md           # This file
+└── src/
+    ├── css/
+    │   └── style.css   # Styles (ready)
+    └── js/
+        ├── main.js           # Entry point (implement here)
+        ├── api/
+        │   └── mealdb.js     # API module (implement here)
+        ├── state/
+        │   └── appState.js   # State management (implement here)
+        └── ui/
+            └── components.js  # UI components (implement here)
+```
 
----
+## 🚀 Getting Started
 
-# 📱 Features
+1. Open `index.html` in your browser to see the design
+2. Start implementing the JavaScript files
+3. Begin with `src/js/api/mealdb.js` - fetch data from the API
+4. Then update `src/js/main.js` to load and display data
 
-🍽️ Browse meals and filter by category/area  
-📝 View meal details including ingredients, steps, video, and nutrition facts  
-📊 Log meals to track daily calories and macros  
-🔍 Product scanner: add food by name or barcode  
-💾 Persistent data using LocalStorage  
-📱 Fully responsive design  
-⚡ Smooth, user-friendly interface
+## 🔗 API Reference
 
----
+### TheMealDB API (Free, No API Key Required)
 
-# 🛠️ Tech Stack
+Base URL: `https://www.themealdb.com/api/json/v1/1/`
 
-HTML5 – Structure & layout  
-CSS3 / Tailwind – Styling and responsiveness  
-JavaScript (ES6) – App logic and DOM manipulation  
-LocalStorage – Data persistence  
-Fetch API – Retrieve meal data dynamically
+| Endpoint | Description | Example |
+|----------|-------------|---------|
+| `/categories.php` | Get all categories | [Try it](https://www.themealdb.com/api/json/v1/1/categories.php) |
+| `/search.php?s={query}` | Search meals by name | [Try it](https://www.themealdb.com/api/json/v1/1/search.php?s=chicken) |
+| `/lookup.php?i={id}` | Get meal by ID | [Try it](https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772) |
+| `/filter.php?c={category}` | Filter by category | [Try it](https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood) |
+| `/filter.php?a={area}` | Filter by area/cuisine | [Try it](https://www.themealdb.com/api/json/v1/1/filter.php?a=Italian) |
+| `/random.php` | Get random meal | [Try it](https://www.themealdb.com/api/json/v1/1/random.php) |
 
----
+## ✅ Tasks to Complete
 
-# 🚀 Getting Started
+### Level 1: Basic Functionality
+- [ ] Fetch and display meal categories in `#categories-grid`
+- [ ] Fetch and display recipes in `#recipes-grid`
+- [ ] Hide the loading overlay when data is loaded
+- [ ] Update the recipe count text
 
-To run the project locally:
+### Level 2: Interactivity
+- [ ] Implement search functionality (use `#search-input`)
+- [ ] Filter recipes when clicking on a category
+- [ ] Show meal details when clicking on a recipe card
 
-1. Clone the repository or download the project files  
-2. Make sure all files (HTML, CSS, JS) are correctly placed  
-3. Open `index.html` in your browser  
-4. Explore meals and log your daily intake!
+### Level 3: Navigation
+- [ ] Implement sidebar navigation between pages
+- [ ] Create different views (Meals, Products, Food Log)
 
----
+### Level 4: Advanced Features
+- [ ] Add loading states while fetching data
+- [ ] Implement error handling for API calls
+- [ ] Save favorites to localStorage
 
-# 🧠 Author
+## 🎨 Key HTML Elements
 
-Developed by Joycie Gerges  
+### Meals Page
+| Element ID | Purpose |
+|------------|---------|
+| `#app-loading-overlay` | Loading screen (hide when ready) |
+| `#categories-grid` | Container for category cards |
+| `#recipes-grid` | Container for recipe cards |
+| `#search-input` | Search input field |
+| `#recipes-count` | Text showing recipe count |
 
-📧 Email: joyciegerges@gmail.com  
-🌐 Portfolio: [https://joycieportfolio.netlify.app/](https://joycieportfolio.netlify.app/)  
-🔗 LinkedIn: [https://www.linkedin.com/in/joycie-gerges-b45514248](https://www.linkedin.com/in/joycie-gerges-b45514248)
+### Product Scanner Page
+| Element ID | Purpose |
+|------------|---------|
+| `#products-section` | Product scanner page container (toggle display) |
+| `#product-search-input` | Product name search input |
+| `#barcode-input` | Barcode number input |
+| `#search-product-btn` | Product search button |
+| `#lookup-barcode-btn` | Barcode lookup button |
+| `#products-grid` | Container for product cards |
+| `#products-count` | Text showing products count |
+| `.nutri-score-filter` | Nutri-Score filter buttons |
+
+### Food Log Page
+| Element ID | Purpose |
+|------------|---------|
+| `#foodlog-section` | Food log page container (toggle display) |
+| `#foodlog-date` | Current date display |
+| `#foodlog-today-section` | Today's nutrition summary |
+| `#logged-items-list` | Container for logged food items |
+| `#weekly-chart` | Weekly chart container (Plotly) |
+| `#clear-foodlog` | Clear all logged items button |
+| `.quick-log-btn` | Quick action buttons |
+
+## 💡 Tips
+
+1. **Start Simple**: First just fetch and log data to console
+2. **Use Modules**: The project uses ES6 modules (`type="module"`)
+3. **Check Console**: Look for TODO messages and errors
+4. **Inspect Design**: The skeleton loaders show the expected card layout
+5. **Navigation**: Use `style.display = "none"` or `style.display = ""` to show/hide sections
+6. **Page State**: Track current page in your app state for navigation
+
+## 🔄 Navigation
+
+To switch between pages, hide/show the relevant sections:
+- **Meals Page**: Show `#search-filters-section`, `#meal-categories-section`, `#all-recipes-section`
+- **Product Scanner**: Show `#products-section`
+- **Food Log**: Show `#foodlog-section`
